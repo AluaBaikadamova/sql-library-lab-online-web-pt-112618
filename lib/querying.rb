@@ -37,6 +37,6 @@ def select_character_names_and_number_of_books_they_are_in
   "select characters.name, count(character_books.id)
   from characters
   join character_books
-  where characters.id=characters_books.character_id
+  where characters.id=character_books.character_id
   order by characters.name desc "
 end
