@@ -38,7 +38,8 @@ def select_character_names_and_number_of_books_they_are_in
   from characters
 
   left join character_books
-  group by characters.name
-having characters.id=character_books.character_id
+  
+where characters.id=character_books.character_id
+group by characters.name
    "
 end
