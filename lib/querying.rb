@@ -28,7 +28,8 @@ end
 def select_series_title_with_most_human_characters
   "select series.title
   from Series
-  where characters.series_id=series.id and characters.species='human'
+  join Characters
+  where characters.species='human' and characters.series_id=series.id 
   order by length(series.title) desc limit 1"
 end
 
