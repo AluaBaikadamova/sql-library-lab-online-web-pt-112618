@@ -37,6 +37,6 @@ def select_character_names_and_number_of_books_they_are_in
   "select characters.name
   from characters
   left join character_books
-  where characters.id=character_books.character_id
+having characters.id=character_books.character_id
    "
 end
