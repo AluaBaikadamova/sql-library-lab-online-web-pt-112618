@@ -36,7 +36,7 @@ end
 def select_character_names_and_number_of_books_they_are_in
   "select characters.name, count (*)
   from characters
-  
+
   left join character_books
   group by characters.name
 having characters.id=character_books.character_id
